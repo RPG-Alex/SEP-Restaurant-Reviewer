@@ -10,5 +10,12 @@
       $results = $this->db->resultSet();
       return $results;
     }
+    public function getRestuarantByID($id){
+      $this->db->query('SELECT * FROM restaurant WHERE restaurantID = :id');
+      $this->db->bind(':id',$id);
+      $row=$this->db->single();
 
+      return $row;
+
+    }
   }
