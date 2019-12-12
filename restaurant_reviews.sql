@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 05, 2019 at 04:33 PM
+-- Generation Time: Dec 12, 2019 at 01:30 PM
 -- Server version: 8.0.18-0ubuntu0.19.10.1
 -- PHP Version: 7.3.11-0ubuntu0.19.10.1
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `restaurant_reviews`
 --
+CREATE DATABASE IF NOT EXISTS `restaurant_reviews` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `restaurant_reviews`;
 
 -- --------------------------------------------------------
 
@@ -31,7 +33,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `dining` (
   `diningID` int(11) NOT NULL,
   `diningtype` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -42,7 +44,7 @@ CREATE TABLE `dining` (
 CREATE TABLE `diningbyreview` (
   `reviewID` int(11) NOT NULL,
   `diningID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -53,7 +55,7 @@ CREATE TABLE `diningbyreview` (
 CREATE TABLE `foodbyreview` (
   `reviewID` int(11) NOT NULL,
   `foodID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -64,7 +66,7 @@ CREATE TABLE `foodbyreview` (
 CREATE TABLE `foods` (
   `foodID` int(11) NOT NULL,
   `food` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -76,7 +78,7 @@ CREATE TABLE `occasion` (
   `occasionID` int(11) NOT NULL,
   `occasion` varchar(30) NOT NULL,
   `description` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -87,7 +89,7 @@ CREATE TABLE `occasion` (
 CREATE TABLE `occasionbyreview` (
   `reviewID` int(11) NOT NULL,
   `occasionID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -101,7 +103,14 @@ CREATE TABLE `restaurant` (
   `description` varchar(250) NOT NULL,
   `location` varchar(250) NOT NULL,
   `contact` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `restaurant`
+--
+
+INSERT INTO `restaurant` (`restaurantID`, `name`, `description`, `location`, `contact`) VALUES
+(1, 'taco johns', 'good tacos', 'wherever you are', 'john of course');
 
 -- --------------------------------------------------------
 
@@ -121,7 +130,7 @@ CREATE TABLE `review` (
   `allergyInfo` tinyint(1) NOT NULL,
   `overall` int(11) NOT NULL,
   `shortReview` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -132,7 +141,7 @@ CREATE TABLE `review` (
 CREATE TABLE `servicebyreview` (
   `serviceID` int(11) NOT NULL,
   `reviewID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -143,7 +152,7 @@ CREATE TABLE `servicebyreview` (
 CREATE TABLE `services` (
   `serviceID` int(11) NOT NULL,
   `service` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -243,7 +252,7 @@ ALTER TABLE `occasion`
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
-  MODIFY `restaurantID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `restaurantID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `review`
