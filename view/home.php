@@ -1,4 +1,3 @@
-
 <div class="container is-fluid centered-level">
 
 <section class="columns hero is-medium">
