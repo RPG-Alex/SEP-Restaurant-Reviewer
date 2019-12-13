@@ -7,6 +7,7 @@
     <tr>
       <td><b>Dining Aspect</b></td>
       <?php
+      //The following code will generate the form iteratively $county is a generic counter variable
         $county=1;
         while ($county <= 10) {
           echo "<td><b>".$county."</b></td>";

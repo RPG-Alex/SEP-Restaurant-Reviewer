@@ -10,6 +10,6 @@
 </head>
 <body>
   <header>
-    <a href="">HOME</a>
-    <a href="">About</a>
+    <a href="<?php echo URLROOT; ?>">HOME</a>
+    <a href="<?php echo URLROOT.'/about.php';?>">About</a>
   </header>

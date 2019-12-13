@@ -1,11 +1,14 @@
-<h1>all the hotdogs</h1>
-
 <?php
+
+$page = new Page;
+$page->header();
+
+//This setup is temporary but does indeed work.
 if (isset($_POST['search'])){
-$test = new Restaurant;
-$search = $test->restaurantSearch($_POST['search']);
+$results = new Restaurant;
+$search = $results->restaurantSearch($_POST['search']);
 foreach ($search as $result ) {
-  echo $result->name; //This is bare bones but will return the queried names from the DB. can expand to add a description as well
+  echo "<a href='$result->name'>".$result->name."</a>"; //URL does not currently work
   }
 }
-?>
+$page->footer();

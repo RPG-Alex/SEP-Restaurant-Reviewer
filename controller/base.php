@@ -8,7 +8,7 @@ define('DB_NAME', 'restaurant_reviews');
 
 // App Root
 define('APPROOT', dirname(dirname(__FILE__)));
-// URL Root
+// URL Root THIS WILL NEED TO BE CONFIGURED WHEN LIVE TO CORRECT URL PATH
 define('URLROOT', 'http://localhost/SEP-Restaurant-Reviewer');
 // Site Name
 define('SITENAME', 'City Xs Restaurant Reviews');
