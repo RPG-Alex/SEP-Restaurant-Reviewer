@@ -1,0 +1,10 @@
+Still need to:
+1) Finish MVC for basic view
+  -Need to configure Page controller to work
+  -Need to configure Header menu to properly navigate to correct (using Page controller logic)
+  -Need to Begin work on reviewer queries and views
+2) Rewrite the Search function so it searchs all relevant fields
+3) Work on Admin routes, including
+  -Login
+  -approve/reject Reviews
+4) Begin working on Styling

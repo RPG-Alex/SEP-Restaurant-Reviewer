@@ -1,6 +1,6 @@
 <?php
-class Page extends Database {
-  function getView(){
-    //need to finish functions for loading views
-  }
+//This class is meant to define the functions used for loading Page data
+class Page {
+
+
 }

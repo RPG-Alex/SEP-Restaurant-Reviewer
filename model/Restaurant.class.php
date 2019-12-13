@@ -1,4 +1,5 @@
 <?php
+//This class defines the functions needed to CRUD with the DB for public users
   class Restaurant extends Database {
     private $db;
     public function __construct(){
@@ -19,7 +20,7 @@
     }
     public function restaurantSearch($keyword){
       $this->db->query('SELECT * FROM restaurant WHERE name LIKE :keyword');
-      $keyword = '%'.$keyword.'%'; //this works, though it looks kind of ugly. Will include results containing keyword, both before and after it from restaurant name. Can also expand to search other fields if needed.
+      $keyword = '%'.$keyword.'%'; //Needs to be updated to query all fields not just title
       $this->db->bind(':keyword',$keyword);
       $results = $this->db->resultSet();
       return $results;
