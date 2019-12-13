@@ -6,11 +6,15 @@ require_once "controller/base.php";
 require_once "controller/init.php";
 $page = new Page;
 $page->header();
-$page->body('home');
 $pageRequested= isset($_GET['page']);
 if ($pageRequested){
   if ($_GET ['page']==="search"){
+    $page->body('home');
     include_once APPROOT.'/view/results.php';
+  } elseif ($_GET['page']==="about") {
+    echo "<p> About us: We run a newspaper! Thats a thing!";
   }
+} else {
+  $page->body('home');
 }
 $page->footer();

@@ -11,5 +11,5 @@
 <body>
   <header>
     <a href="<?php echo URLROOT; ?>">HOME</a>
-    <a href="<?php echo URLROOT.'/about.php';?>">About</a>
+    <a href="<?php echo 'index.php?page=about';?>">About</a>
   </header>
