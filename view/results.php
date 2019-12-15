@@ -3,12 +3,12 @@
 $page = new Page;
 $page->header();
 
-//This setup is temporary but does indeed work.
+//Temporary setup but is functional.
 if (isset($_POST['search'])){
 $results = new Restaurant;
 $search = $results->restaurantSearch($_POST['search']);
 foreach ($search as $result ) {
-  echo "<a href='$result->name'>".$result->name."</a>"; //URL does not currently work
+  echo "<a href='index.php?page=restaurant&amp;id=".$result->restaurantID."'>".$result->name."</a>";
   }
 }
 $page->footer();

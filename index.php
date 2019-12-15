@@ -13,7 +13,7 @@ if ($pageRequested){
     include_once APPROOT.'/view/results.php';
   } elseif ($_GET['page']==="about") {
     echo "<p> About us: We run a newspaper! Thats a thing!";
-  } elseif ($_GET['page']==="restaurant") {
+  } elseif ($_GET['page']==="restaurant" && isset($_GET['id'])) {
     $page->body('restaurantInfo');
   }
 } else {
