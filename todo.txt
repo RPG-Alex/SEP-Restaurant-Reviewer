@@ -8,3 +8,9 @@ Still need to:
   -Login
   -approve/reject Reviews
 4) Begin working on Styling
+
+
+
+JIC: 
+git push https://github.com/alexbteacher/SEP-Restaurant-Reviewer.git testing
+git pull https://github.com/alexbteacher/SEP-Restaurant-Reviewer.git testing
