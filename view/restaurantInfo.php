@@ -1,5 +1,6 @@
 <?php
-$restaurant = $test->getRestuarantByID($id); //Don't forget to pass the ID at some point!
+//This whole view needs to be redone to load in the resataurant template, and linked to the specific restaurant info
+//$restaurant = $test->getRestuarantByID($id); //Don't forget to pass the ID at some point!
  ?>
 
 
