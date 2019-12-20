@@ -25,5 +25,3 @@
       // same as addRestaurant but updates an existing restaurant details
     }
   }
-
- ?>
