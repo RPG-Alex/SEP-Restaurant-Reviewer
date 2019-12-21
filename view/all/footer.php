@@ -1,7 +1,8 @@
 <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>Resturaunt Reviewer</strong> by <a href="https://github.com/alexbteacher/SEP-Restaurant-Reviewer">Alex Blood & Neil Davis: 2019 - <?php echo date('Y'); //returns current copyright range?></a>
+          <strong>Resturaunt Reviewer</strong> by <a href="https://github.com/alexbteacher/SEP-Restaurant-Reviewer">Alex Blood & Neil Davis:</a>
+          <?php echo '2019 - ' . date('Y'); //returns current copyright range?>
         </p>
       </div>
     </footer>
