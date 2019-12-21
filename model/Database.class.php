@@ -11,7 +11,7 @@
   class Database {
     private $host = 'localhost';
     private $user = 'root';
-    private $pass = '1';
+    private $pass = '';
     private $dbname = 'restaurant_reviews';
 
     private $dbh;
