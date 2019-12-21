@@ -11,4 +11,4 @@ define('APPROOT', dirname(dirname(__FILE__)));
 // URL Root THIS WILL NEED TO BE CONFIGURED WHEN LIVE TO CORRECT URL PATH
 define('URLROOT', 'http://localhost/SEP-Restaurant-Reviewer');
 // Site Name
-define('SITENAME', 'City Xs Restaurant Reviews');
+define('SITENAME', 'Eat This: A The Daily Yawn site');
