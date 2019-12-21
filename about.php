@@ -6,7 +6,23 @@ ini_set("display_errors",1);
 require_once "controller/base.php";
 require_once "controller/init.php";
 $page = new Page;
-$page->header();
-echo "<h1> About us:</h1>
-<p> We are owned and operated by The daily yawn. ";
-$page->footer();
+
+$page->header(); ?>
+
+<div id="about" class="">
+    <section class="hero is-large is-primary is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                About Us
+            </h1>
+            <h2 class="subtitle">
+                We are Owned and Operated by The Daily Yawn
+            </h2>
+        </div>
+    </div>
+    </section>
+</div>
+
+
+<?php $page->footer(); ?>
