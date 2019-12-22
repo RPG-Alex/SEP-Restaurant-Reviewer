@@ -1,8 +1,15 @@
+.submitReview{
+    max-width: 100px;
+}
+
+/* RANGE SLIDER STYLING */
+
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
       overflow: hidden;
       width: 50%;
+      min-width: 400px;
       -webkit-appearance: none;
       background-color: hsl(141, 53%, 53%);
     }
