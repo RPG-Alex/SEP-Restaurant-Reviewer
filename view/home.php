@@ -39,7 +39,7 @@
             echo "<a href='index.php?page=restaurant&amp;id=".$result->restaurantID."'>".$result->name."</a><p>".$result->description."</p><p>Location: ".$result->location;
             }
           }
-        ?>;
+        ?>
       </div>
     </div>
   </section>

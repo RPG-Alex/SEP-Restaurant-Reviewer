@@ -11,7 +11,6 @@ $pageRequested= isset($_GET['page']);
 if ($pageRequested){
   if ($_GET ['page']==="search"){
     $page->body('home');
-    include_once APPROOT.'/view/results.php';
   } elseif ($_GET['page']==="about") {
     $page->body('../about');
   } elseif ($_GET['page']==="restaurant" && isset($_GET['id'])) {
