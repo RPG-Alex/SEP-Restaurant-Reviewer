@@ -17,6 +17,8 @@ if ($pageRequested){
     $page->body('restaurantInfo');
     $page->body('postReview');
     $page->body('restaurantReview');
+  } elseif ($_GET['page']==="login") {
+    $page->body('admin-login');
   }
 } else {
   $page->body('home');

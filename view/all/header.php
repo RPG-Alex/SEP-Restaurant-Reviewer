@@ -43,10 +43,10 @@
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Sign up</strong>
+            <strong>Something</strong>
           </a>
-          <a class="button is-light">
-            Log in
+          <a href="<?php echo 'index.php?page=login' ?>"class="button is-light">
+            Admin Log in
           </a>
         </div>
       </div>

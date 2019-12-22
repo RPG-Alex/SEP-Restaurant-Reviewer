@@ -5,10 +5,10 @@
 
       <div class="column">
         <h1 class="title">
-          City X's Restuarant Reviews!
+          EAT THIS!
         </h1>
         <h2 class="subtitle">
-          Brought to you by news Organization!
+          Brought to you by The Daily Yawn
         </h2>
         <form class="column" action='<?php echo 'index.php?page=search'; ?>' method="post">
 
