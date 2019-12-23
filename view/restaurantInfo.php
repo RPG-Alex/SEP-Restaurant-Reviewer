@@ -4,7 +4,15 @@ $RID = $_GET['id'];// this line may be redundant, can we pass the get value alon
 $details = $restaurant->getRestuarantByID($RID);
 //need to create a catch here. in the event an ID is input that is not valid, sometihng like 'sorry the page you are looking for doesn't exist'
 ?>
-    <h3><b>Restaurant Name: <?php echo $details->name; ?></b></h3>
-    <p><b>description: <?php echo $details->description; ?></b></p>
-    <p><b>Location: <?php echo $details->location; ?></b></p>
-    <p><b>Contact: <?php echo $details->contact; ?></b></p>
+    <div class="container hero is-medium is-primary is-fluid">
+        <h3 class="title has-text-dark"><strong>Restaurant Name:</strong> <?php echo $details->name; ?></h3>
+        <p class="subtitle has-text-dark">
+            <strong class="has-text-dark">description:</strong> <?php echo $details->description; ?>
+        </p>
+        <p class="subtitle has-text-dark">
+            <strong class="has-text-dark">Location:</strong> <?php echo $details->location; ?>
+        </p>
+        <p class="subtitle has-text-dark">
+            <strong class="has-text-dark">Contact:</strong> <?php echo $details->contact; ?>
+        </p>
+    </div>

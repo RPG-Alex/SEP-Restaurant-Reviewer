@@ -1,6 +1,6 @@
-<div class="container is-fluid centered-level">
+<div class="centered-level">
 
-  <section class="columns hero is-medium">
+  <section class="columns hero is-medium is-primary">
     <div class="hero-body level-left">
 
       <div class="column">
@@ -25,7 +25,7 @@
             </div>
           </div>
           <div>
-            <input class="button is-primary is-large is-outlined level-right" type="submit" name="submit" value="GO!">
+            <input class="button is-large level-right" type="submit" name="submit" value="GO!">
           </div>
 
       </form>
@@ -36,7 +36,15 @@
           $results = new Restaurant;
           $search = $results->restaurantSearch($_POST['search']);
           foreach ($search as $result ) {
-            echo "<a href='index.php?page=restaurant&amp;id=".$result->restaurantID."'>".$result->name."</a><p>".$result->description."</p><p>Location: ".$result->location;
+            echo "
+            <div class='is-rounded'>
+              <a class='title has-text-link' href='index.php?page=restaurant&amp;id=".$result->restaurantID."'>
+              ".$result->name.
+              "</a>
+              <p>".$result->description."</p>
+              <p>Location: ".$result->location.'</p>
+              </div>
+              <hr/>';
             }
           }
         ?>
