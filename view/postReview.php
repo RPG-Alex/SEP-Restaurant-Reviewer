@@ -1,5 +1,5 @@
 <div id="postReview" class="container is-fluid">
-  <hr>
+  <br/>
   <h1 class="title">My Review </h1>
   <form class="container" action="<?php echo "index.php?page=restaurant&id=".$_GET['id']; ?>" method='post'>
     <h2 class="subtitle">Rate your experience (scale of 1-10)</h1>
