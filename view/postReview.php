@@ -23,15 +23,24 @@
       <p>Value:</p> 
       <input class="scale" type="range" min='1' max = '10' name='val' value="5"/>
     </div>
-    <section class="section is-small">
-      <p>Allergy Info Provided?</p> 
-      <input class="radio" type="radio" name="aler" value="true"> Yes <input class="radio" type="radio" name="aler" value="false"> No
-    </section>
-    <div>
-    <p>Short Review:</p> 
-    <textarea class="textarea is-large" type="text" name="short" placeholder="Tell us about your experience in under 150 characters" required maxlength="149" />
-    </textarea>
+
+    <div class="section">
+      <h3>Allergy Info Provided?</h3> 
+      <div class="radio-toolbar">
+        <input type="radio" id="yes" name="aler" value="true">
+        <label for="yes">Yes</label> 
+        <input type="radio" id="no" name="aler" value="false"> 
+        <label for="no">No</label>
+      </div>
+    </div>
+    
+    <div class="field">
+      <p>Short Review:</p> 
+      <textarea class="textarea is-large field" type="text" name="short" placeholder="Tell us about your experience in under 150 characters" required maxlength="149" />
+      </textarea>
   </div>
-    <input class="button is-primary" type="submit" name="Critique!" value="submit">
+  <div class="field">
+    <input class="button is-fullwidth is-primary" type="submit" name="Critique!" value="submit">
+  </div>
   </form>
 </div>  
