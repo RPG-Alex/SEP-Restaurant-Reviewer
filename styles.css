@@ -1,5 +1,5 @@
 
-/* ------------------- GENERAL STYLES -------------- */
+/* ------------------- GENERAL ADDITIONAL STYLES -------------- */
 
 .restaurant-info {
   width: 80%; 
@@ -44,7 +44,7 @@ input[type=range]::-ms-track {
   color: transparent;
 }
 
-/* Special styling for WebKit/Blink */
+/* Special styling for WebKit */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
@@ -151,6 +151,7 @@ input[type=range]:focus::-ms-fill-upper {
 .radio-toolbar label {
     display: inline-block;
     width: 10%;
+    min-width: 100px;
     text-align: center;
     background-color: #ddd;
     padding: 10px 20px;
