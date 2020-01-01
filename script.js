@@ -1,7 +1,6 @@
 // ALLOWS TOGGLING OF HAMBURGER
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("Burger");
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// Need to add Javascript search function for allRestaurants table
+// Filter function assigned to input and table elements on allRestaurants page
 function filterTable(event) {
 
   // get typed input data from keyup event, select table rows from DOM
