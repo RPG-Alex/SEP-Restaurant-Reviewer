@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// Need to add Javascript search function for allRestaurants table
