@@ -8,7 +8,7 @@ require_once "controller/init.php";
 $page = new Page;
 $page->header();
 $pageRequested= isset($_GET['page']);
-if ($pageRequested){
+if ($pageRequested == true){
   if ($_GET ['page']==="search"){
     $page->body('home');
   } elseif ($_GET['page']==="about") {
@@ -19,6 +19,8 @@ if ($pageRequested){
     $page->body('restaurantReview');
   } elseif ($_GET['page']==="login") {
     $page->body('admin-login');
+  } elseif ($_GET['page']==="all") {
+    $page->body('allRestaurants');
   }
 } else {
   $page->body('home');

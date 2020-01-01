@@ -13,7 +13,7 @@
 
   <!--CUSTOM STYLES-->
   <link rel="stylesheet" media="all" href="<?php echo './styles.css' ?>" />
-  
+
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
   <title><?php echo SITENAME; ?></title>
@@ -49,10 +49,10 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Something</strong>
+          <a class="button is-primary" href="<?php echo 'index.php?page=all'; ?>">
+            <strong>Browse All</strong>
           </a>
-          <a href="<?php echo 'index.php?page=login' ?>"class="button is-light">
+          <a href="<?php echo 'index.php?page=login'; ?>"class="button is-light">
             Admin Log in
           </a>
         </div>
