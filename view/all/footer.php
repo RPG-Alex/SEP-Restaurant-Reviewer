@@ -8,4 +8,6 @@
     </footer>
 
   </body>
+  <!-- Custom Scripts -->
+  <script src="./script.js"></script>
 </html>

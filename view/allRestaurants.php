@@ -1,26 +1,64 @@
 <?php
 $allRestaurants = new Restaurant;
 $restaurants=$allRestaurants->getRestaurants();
-//Above instantiates a new array of ALL restaurants.
-//Array is: RestaurantID, name, description, location, contact Info.
-//Beloew the PHP closing tag, write the deired HTML/CSS/JS! should be easy to implement, Thanks!
-
-// Added the search results below, but need to style this as a table (name, description, location, overall rating) 
-// We need to add a search bar to this page to filter teh table - could be done using a server call or through client side JS?
 ?>
-If you are seeing this, the view loaded! Please delete me when you design this view
 
-<?php
-        $results = new Restaurant;
-        foreach ($restaurants as $result ) {
-        echo "
-        <div class='is-rounded'>
-            <a class='title has-text-link' href='index.php?page=restaurant&amp;id=".$result->restaurantID."'>
-            ".$result->name.
-            "</a>
-            <p>".$result->description."</p>
-            <p>Location: ".$result->location.'</p>
+<div class="container">
+    <div class="field is-horizontal">
+        <div class="field-label is-normal">
+            <label class="label">Search</label>
+        </div>
+        <div class="field-body">
+            <div class="field">
+            <p class="control">
+                <input id="filterRestaurants" class="input is-primary" type="text" placeholder="Find a restaurant" />
+            </p>
             </div>
-            <hr/>';
-            }
-        ?>
+        </div>
+    </div>
+</div>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="table-container">
+            <table id="restaurants" class="table is-striped custom-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+            <?php
+                    $results = new Restaurant;
+                    foreach ($restaurants as $result ) {
+                    echo "
+                        <tr class='is-rounded'>
+                            <td>
+                                $result->name
+                            </td>
+                            <td>
+                                <p>".$result->description."</p>
+                            </td>
+                            <td>
+                                <p>".$result->location.'</p>
+                            </td>
+                            <td>
+                                '.$result->contact.'
+                            </td>
+                            <td>
+                                <a class="has-text-link" href="index.php?page=restaurant&amp;id='.$result->restaurantID.'">
+                                view more
+                                </a>
+                            </td>
+                        </tr>';
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
