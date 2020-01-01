@@ -41,20 +41,20 @@ $restaurants=$allRestaurants->getRestaurants();
                                 $result->name
                             </td>
                             <td>
-                                <p>".$result->description."</p>
+                                $result->description
                             </td>
                             <td>
-                                <p>".$result->location.'</p>
+                                $result->location
                             </td>
                             <td>
-                                '.$result->contact.'
+                                $result->contact
                             </td>
                             <td>
-                                <a class="has-text-link" href="index.php?page=restaurant&amp;id='.$result->restaurantID.'">
+                                <a class='has-text-link' href='index.php?page=restaurant&amp;id=".$result->restaurantID."'>
                                 view more
                                 </a>
                             </td>
-                        </tr>';
+                        </tr>";
                         }
                     ?>
                 </tbody>
