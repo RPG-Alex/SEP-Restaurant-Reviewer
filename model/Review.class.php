@@ -8,6 +8,7 @@
       $this->db->query('');// Need to finish writing this function
     }
     public function postReview($review){
+      console.log($review);
       $this->db->query('INSERT INTO review (restaurantID, cost, qfood, qservice, qclean, spservice, value, allergyinfo, overall, shortReview) VALUES (:restaurantID, :cost, :qfood, :qservice, :qclean, :spservice, :value, :allergyinfo, :overall, :shortReview)');
       $this->db->bind(':restaurantID',$rid) ;
       $this->db->bind(':cost',$cost);
@@ -20,5 +21,6 @@
       $this->db->bind(':overall',$overall);
       $this->db->bind(':shortReview',$shortReview);
       //Still need to finish this, but as is it should insert all data needed for a review!
+      // Need to add approved column to db, and set default value to false. Admin have ability to toggle.
     }
   }

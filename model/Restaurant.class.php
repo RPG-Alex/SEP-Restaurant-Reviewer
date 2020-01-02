@@ -19,8 +19,8 @@
       return $row;
     }
     public function restaurantSearch($keyword){
-      $this->db->query('SELECT * FROM restaurant WHERE name LIKE :keyword');
-      $keyword = '%'.$keyword.'%'; //Needs to be updated to query all fields not just title
+      $this->db->query('SELECT * FROM restaurant WHERE name OR description OR location LIKE :keyword');
+      $keyword = '%'.$keyword.'%'; 
       $this->db->bind(':keyword',$keyword);
       $results = $this->db->resultSet();
       return $results;
