@@ -7,7 +7,7 @@ $details = $restaurant->getRestuarantByID($RID);
     <div class="container hero is-medium is-primary is-fluid">
         <div class="container hero is-medium is-primary is-fluid restaurant-info" style="">
             <br/>
-            <h1 class="title"><strong>Restaurant Name:</strong> <?php echo $details->name; ?></h1>
+            <h1 class="title is-1"><strong><?php echo $details->name; ?></strong></h1>
             <hr/>
             <h3 class="subtitle has-text-dark">
                 <strong class="has-text-dark">Description:</strong> <?php echo $details->description; ?>
