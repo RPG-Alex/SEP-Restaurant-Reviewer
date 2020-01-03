@@ -50,7 +50,7 @@
             <strong>Browse All</strong>
           </a>
           <?php
-            
+
             //This link will be now show logged in status dynamically based on whether the session variable is set.
             if (isset($_SESSION['logged_in'])) {
               if ($_SESSION['logged_in'] === true) {
@@ -62,6 +62,13 @@
             }
             ?>
           </a>
+          <?php
+          if (isset($_SESSION['logged_in'])) {
+            if ($_SESSION['logged_in'] === true) {
+              echo '<a href="index.php?page=logout" class="button is-light"> Log Out</a>';
+            }
+          }
+           ?>
         </div>
       </div>
     </div>

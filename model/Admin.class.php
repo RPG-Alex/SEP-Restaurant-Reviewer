@@ -3,15 +3,15 @@
 // Login, data CRUD, etc.
   class Admin extends Database {
     private $db;
-    public $admin_log = $_SESSION['logged_in'];
     public function __construct(){
       $this->db = new Database;
     }
     public function login(){ // simply sets the session variable
+      session_start();
       $_SESSION['logged_in'] = true;
     }
     public function logout(){
-      $_SESSION['logged_in'] = false;
+      unset($_SESSION['logged_in']);
     }
     public function getReviewsToApprove(){
       // need to write a function to get all reviews in need of approval
