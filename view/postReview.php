@@ -22,6 +22,10 @@
       <p>Speed of Service:</p>
       <input class="scale" type="range" min='1' max = '10' name='spservice' value="5"/>
     </div>
+    <div class="field container" style="width: 60%;">
+      <label for="cost">How much did you spend here today?</label>
+      <input class="input" type="number" min="0" max="10000" step=".01" name="cost" id="cost">
+    </div>
     <div>
       <p>Value:</p>
       <input class="scale" type="range" min='1' max = '10' name='value' value="5"/>
@@ -38,17 +42,13 @@
     </div>
 
     <div>
-      <p>Overall:</p>
+      <p>Overall Rating:</p>
       <input class="scale" type="range" min='1' max = '10' name='overall' value="5"/>
     </div>
 
     <div class="field">
       <p>Short Review:</p>
       <textarea class="textarea is-large field" type="text" name="shortReview" placeholder="Tell us about your experience in under 150 characters" required maxlength="149" /></textarea>
-  </div>
-  <div class="">
-    <label for="cost">How much did you spend here today?</label>
-    <input type="number" min="0" max="10000" step=".01" name="cost" id="cost">
   </div>
   <div class="field">
     <input class="button is-fullwidth is-primary" type="submit" name="Critique!" value="submit">

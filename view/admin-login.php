@@ -7,7 +7,7 @@
           <input class="admin input" type="text" name="userid" placeholder="username">
         </div>
         <div class="field">
-          <input class="admin input" name="password" placeholder="input password">
+          <input class="admin input" type="password" name="password" placeholder="input password">
         </div>
         <div class="field">
           <input class="admin button is-primary" type="submit" name="login" value="login">

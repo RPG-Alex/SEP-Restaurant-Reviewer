@@ -4,9 +4,17 @@
     public function __construct(){
       $this->db = new Database;
     }
+    // get all reviews where approved = 1
     public function getAllReviewsForRestaurant($rid){
       $this->db->query('');// Need to finish writing this function
     }
+
+    // get ALL reviews function to just display a table of reviews for the admin regardless of approved or not?
+    public function getAllReviews(){
+      $this->db->query('');// Need to finish writing this function
+    }
+
+
     public function postReview($review){
       $this->db->query('INSERT INTO review (restaurantID, cost, qfood, qservice, qclean, spservice, value, allergyinfo, overall, shortReview) VALUES (:restaurantID, :cost, :qfood, :qservice, :qclean, :spservice, :value, :allergyinfo, :overall, :shortReview)');
       $this->db->bind(':restaurantID',$review['rid']) ;
