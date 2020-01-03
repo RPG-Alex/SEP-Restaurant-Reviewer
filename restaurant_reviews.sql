@@ -129,7 +129,8 @@ CREATE TABLE `review` (
   `value` int(11) NOT NULL,
   `allergyInfo` tinyint(1) NOT NULL,
   `overall` int(11) NOT NULL,
-  `shortReview` varchar(150) NOT NULL
+  `shortReview` varchar(150) NOT NULL,
+  `approved` boolean NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

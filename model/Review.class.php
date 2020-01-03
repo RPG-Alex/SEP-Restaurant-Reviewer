@@ -19,7 +19,6 @@
       $this->db->bind(':allergyinfo',$review['allergyinfo']);
       $this->db->bind(':overall',$review['overall']);
       $this->db->bind(':shortReview',$review['shortReview']);
-
       if($this->db->execute()){
         return true;
       } else {
