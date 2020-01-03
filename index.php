@@ -21,6 +21,9 @@ if ($pageRequested == true){
     $page->body('admin-login');
   } elseif ($_GET['page']==="all") {
     $page->body('allRestaurants');
+  } elseif ($_GET['page']==="admin" && isset($_SESSION['logged_in']) === true) {
+    //This checks if you are logged in and then and only then loads the admin view! Tested and working
+    $page->body('admin');
   }
 } else {
   $page->body('home');

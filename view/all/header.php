@@ -49,8 +49,18 @@
           <a class="button is-primary" href="<?php echo 'index.php?page=all'; ?>">
             <strong>Browse All</strong>
           </a>
-          <a href="<?php echo 'index.php?page=login'; ?>"class="button is-light">
-            Admin Log in
+          <?php
+            
+            //This link will be now show logged in status dynamically based on whether the session variable is set.
+            if (isset($_SESSION['logged_in'])) {
+              if ($_SESSION['logged_in'] === true) {
+                echo '<a href="index.php?page=admin" class="button is-light"> Admin View';
+
+              }
+            } else {
+              echo '<a href="index.php?page=login" class="button is-light"> Admin Log in';
+            }
+            ?>
           </a>
         </div>
       </div>
