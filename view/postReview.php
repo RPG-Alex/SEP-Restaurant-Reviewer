@@ -30,9 +30,9 @@
     <div class="section">
       <h3>Allergy Info Provided?</h3>
       <div class="radio-toolbar">
-        <input type="radio" id="yes" name="allergyInfo" value="TRUE">
+        <input type="radio" id="yes" name="allergyInfo" value="TRUE" >
         <label for="yes">Yes</label>
-        <input type="radio" id="no" name="allergyInfo" value="0">
+        <input type="radio" id="no" name="allergyInfo" value="0" checked>
         <label for="no">No</label>
       </div>
     </div>
@@ -44,8 +44,7 @@
 
     <div class="field">
       <p>Short Review:</p>
-      <textarea class="textarea is-large field" type="text" name="shortReview" placeholder="Tell us about your experience in under 150 characters" required maxlength="149" />
-      </textarea>
+      <textarea class="textarea is-large field" type="text" name="shortReview" placeholder="Tell us about your experience in under 150 characters" required maxlength="149" /></textarea>
   </div>
   <div class="">
     <label for="cost">How much did you spend here today?</label>
