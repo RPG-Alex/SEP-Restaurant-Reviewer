@@ -1,4 +1,5 @@
 <?php
+require_once APPROOT."/controller/Review.php";
 // basic layout of how all reviews could be listed for restaurant. Then use some javascript and CSS on the client side to hide them until expanded or what have you.
  ?>
  <br>

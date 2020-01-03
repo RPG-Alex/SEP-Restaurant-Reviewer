@@ -28,6 +28,8 @@ if ($pageRequested == true){
   } elseif ($_GET['page']==="admin") {
     //This checks if you are logged in and then and only then loads the admin view! Tested and working
     require_once APPROOT.'/controller/Admin.php';
+  } elseif ($_GET['page']==="posted" ) {
+    require_once APPROOT.'/controller/Review.php';
   }
 } else {
   $page->body('home');
