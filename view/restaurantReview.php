@@ -16,7 +16,11 @@ $reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
       echo "
       <div class='accordion'>
         <div class='accordion-item'>
-          <a><div>$review->shortReview <span style='float: right;'>$review->overall / 10</span></div></a>
+          <a>
+            <div>
+              $review->shortReview <span>$review->overall / 10</span>
+            </div>
+          </a>
           <div class='accordion-content'>
             <ul class='review-scores-list'>
               <li>Quality: 

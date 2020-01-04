@@ -4,7 +4,6 @@
 #postReview{
   max-width: 600px;
 }
-
 #addRestaurant{
   max-width: 600px;
 }
@@ -15,20 +14,24 @@
   margin: 0 auto;
   color: white;
 }
-
+.search-bar{
+  padding: 1em;
+  margin-top: 1em;
+}
+.custom-table{
+  width: 80%;
+  margin: 0 auto;
+}
 .restaurant-info {
   width: 80%; 
   text-align: center;
 }
-
 .restaurant {
   color: blue;
 }
-
 .submitReview{
     max-width: 100px;
 }
-
 .review-scores-list li span{
   float: right;
 }

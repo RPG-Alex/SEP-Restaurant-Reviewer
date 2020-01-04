@@ -3,7 +3,7 @@ $allRestaurants = new Restaurant;
 $restaurants=$allRestaurants->getRestaurants();
 ?>
 
-<div class="container">
+<div class="container search-bar" style="max-width: 400px;">
     <div class="field is-horizontal">
         <div class="field-label is-normal">
             <label class="label">Search</label>
@@ -18,10 +18,10 @@ $restaurants=$allRestaurants->getRestaurants();
     </div>
 </div>
 
-<section class="hero">
+<section class="container hero">
     <div class="hero-body">
-        <div class="table-container">
-            <table id="restaurants" class="table is-striped custom-table">
+        <div class="table-container" style="width: 80%; margin: auto;">
+            <table id="restaurants" class="table is-striped custom-table" style="margin: auto;">
                 <thead>
                     <tr>
                         <th>Name</th>
