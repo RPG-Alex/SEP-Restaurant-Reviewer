@@ -12,7 +12,7 @@ $reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
 
   <?php
     foreach ($reviewSet as $review) {
-    if ($review->approved == 0) {  //This checks if they are approved
+    if ($review->approved == 1) {  //This checks if they are approved
       echo "
       <div class='accordion'>
         <div class='accordion-item'>
