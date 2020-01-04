@@ -14,6 +14,10 @@
     max-width: 100px;
 }
 
+#postReview{
+  max-width: 600px;
+}
+
 /* --------------------TABLE STYLING -------------------------------- */
 
 .custom-table{
