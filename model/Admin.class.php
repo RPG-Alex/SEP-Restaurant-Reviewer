@@ -42,7 +42,7 @@
       }
     }
     public function addRestaurant($restaurant){
-      $this->db->query('INSERT INTO restaurant (name,description,location,contact) VALUES (:name, :location,:contact)');
+      $this->db->query('INSERT INTO restaurant (name,description,location,contact) VALUES (:name,:description, :location,:contact)');
       $this->db->bind(':name', $restaurant['name']);
       $this->db->bind(':description', $restaurant['description']);
       $this->db->bind(':location', $restaurant['location']);

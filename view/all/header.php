@@ -54,7 +54,8 @@
             //This link will be now show logged in status dynamically based on whether the session variable is set.
             if (isset($_SESSION['logged_in'])) {
               if ($_SESSION['logged_in'] === true) {
-                echo '<a href="index.php?page=admin" class="button is-light"> Admin View';
+                echo '<a href="index.php?page=admin" class="button is-light"> Admin View</a>';
+                echo '<a href="index.php?page=newRestaurant" class="button is-light"> Add Restaurant</a>';
 
               }
             } else {
