@@ -49,3 +49,5 @@ function filterTable(event) {
 
 // selects the input box and assigns a keyup event which triggers the filterTable function above
 document.querySelector('#filterRestaurants').addEventListener('keyup', filterTable, false);
+
+

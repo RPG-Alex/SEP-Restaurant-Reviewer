@@ -185,3 +185,90 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: rgb(000,174,148);
   color: white;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.accordion-container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: rgb(0, 174, 148);
+}
+
+.accordion a.active {
+  color: rgb(0, 174, 148);
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion .accordion-content {
+  margin: 0 auto;
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .accordion-content.active {
+  margin: 0 auto;
+  opacity: 1;
+  padding: 1rem;
+  width: 50%;
+  min-width: 350px;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}

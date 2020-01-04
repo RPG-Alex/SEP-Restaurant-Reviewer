@@ -4,18 +4,18 @@ $RID = $_GET['id']; // this line may be redundant, can we pass the get value alo
 $details = $restaurant->getRestuarantByID($RID);
 if (isset($details->restaurantID)) {
   echo "<div class='container hero is-medium is-primary is-fluid'>
-      <div class='container hero is-medium is-primary is-fluid restaurant-info' style=''>
+      <div class='container hero is-medium is-primary is-fluid restaurant-info'>
           <br/>
           <h1 class='title is-1'><strong>$details->name</strong></h1>
           <hr/>
-          <h3 class='subtitle has-text-dark'>
-              <strong class='has-text-dark'>Description:</strong>$details->description
+          <h3 class='has-text-dark'>
+              <strong >Description:</strong> $details->description
           </h3>
-          <h3 class='subtitle has-text-dark'>
-              <strong class='has-text-dark'>Location:</strong>$details->location
+          <h3 class='has-text-dark'>
+              <strong>Location:</strong> $details->location
           </h3>
-          <h3 class='subtitle has-text-dark'>
-              <strong class='has-text-dark'>Contact:</strong>$details->contact
+          <h3 class='has-text-dark'>
+              <strong>Contact:</strong> $details->contact
           </h3>
           <hr/>
       </div>
