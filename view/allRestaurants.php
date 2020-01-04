@@ -20,7 +20,7 @@ $restaurants=$allRestaurants->getRestaurants();
 
 <section class="container hero">
     <div class="hero-body">
-        <div class="table-container" style="width: 80%; margin: auto;">
+        <div class="table-container" style="width: 90%; margin: auto;">
             <table id="restaurants" class="table is-striped custom-table" style="margin: auto;">
                 <thead>
                     <tr>

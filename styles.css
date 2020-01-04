@@ -18,10 +18,6 @@
   padding: 1em;
   margin-top: 1em;
 }
-.custom-table{
-  width: 80%;
-  margin: 0 auto;
-}
 .restaurant-info {
   width: 80%; 
   text-align: center;
@@ -33,6 +29,9 @@
     max-width: 100px;
 }
 .review-scores-list li span{
+  float: right;
+}
+.accordion span{
   float: right;
 }
 

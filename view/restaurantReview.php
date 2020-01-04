@@ -3,14 +3,33 @@
 $allReviews = new Review;
 $reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
 //Below will Generate the reviews previously posted
-
+$total = 0;
+  $reviews = 0;
+  foreach ($reviewSet as $review) {
+    $total += $review->overall;
+    $reviews ++;
+  }
 ?>
 <div class="container">
   <div class="accordion-container">
 
-  <h2 class="title">Reviews</h2>
+  <div>
+    <div class="title is-4">Reviews
+      <span style="float: right;">
+        <?php
+          if ($reviews > 0) {
+            $average = $total / $reviews;
+            echo 'Average: ' . round($average, $precision = 1, $mode = PHP_ROUND_HALF_UP) .'/10';
+          } else {
+            echo "No reviews yet";
+          }
+        ?>
+      </span>
+    </div>
+  </div>
 
   <?php
+
     foreach ($reviewSet as $review) {
     if ($review->approved == 1) {  //This checks if they are approved
       echo "
