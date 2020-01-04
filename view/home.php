@@ -10,7 +10,7 @@
         <h2 class="subtitle">
           Brought to you by The Daily Yawn
         </h2>
-        <form class="column" action='<?php echo 'index.php?page=search'; ?>' method="post">
+        <form class="column" action='<?php echo 'index.php'; ?>' method="post">
 
           <div class="field is-grouped">
             <div class="control is-expanded">
