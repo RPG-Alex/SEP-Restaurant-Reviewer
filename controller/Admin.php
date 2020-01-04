@@ -3,7 +3,6 @@
 require_once APPROOT.'/model/Admin.class.php';
  // This will instantiate a new admin class object and from here we can work with logging in
 
-
 //This is a temporary fix for credentials not set, basically just prevents anyone from being able to use the URL to skip admin login
 if ($_GET['page']==="admin" && isset($_SESSION['logged_in']) === true) {
   $admin = new Admin;

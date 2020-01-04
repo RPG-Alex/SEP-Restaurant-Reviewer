@@ -14,12 +14,12 @@ if (isset($_POST['Critique!'])) {
     'shortReview' => $_POST['shortReview']
   ];
 
-//This is incase they don't submit a cost. The Db is set to have a cost. May change that later, and simply allow NULL or rewrite it and have two query fucntions,one for cost given and one for not. If stats are used, like average cost, this will have to be factored in, as 0 costs will bring average cost down, unintentionally. 
+//This is incase they don't submit a cost. The Db is set to have a cost. May change that later, and simply allow NULL or rewrite it and have two query fucntions,one for cost given and one for not. If stats are used, like average cost, this will have to be factored in, as 0 costs will bring average cost down, unintentionally.
 if ($reviewDetails['cost'] ==="") {
   $reviewDetails['cost'] = "0";
 }
   $newReview = new Review;
   $newReview->postReview($reviewDetails);
-  header("Location: ".URLROOT);
+  header("Location: ".URLROOT."/index.php?page=restaurant&id=".$_POST['rid']);
   echo "Review POSTED! Pending Approval!";
 }

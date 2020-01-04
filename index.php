@@ -2,6 +2,8 @@
 //DELETE WHEN GOING LIVE - This is for testing
 error_reporting( E_ALL);
 ini_set("display_errors",1);
+$_SESSION['logged_in'] = true;
+
 
 //
 require_once "controller/base.php";
@@ -29,6 +31,7 @@ if ($pageRequested == true){
   } elseif ($_GET['page']==="admin") {
     //This checks if you are logged in and then and only then loads the admin view! Tested and working
     require_once APPROOT.'/controller/Admin.php';
+    $page->body('admin');
   } elseif ($_GET['page']==="posted" ) {
     require_once APPROOT.'/controller/Review.php';
   }

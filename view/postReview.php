@@ -5,7 +5,7 @@
   <div class="container">
     <h1 class="title">My Review </h1>
   </div>
-  <form class="container" action="<?php echo "index.php?page=posted"; ?>" method='post'>
+  <form class="container" action="" method='post'>
     <h2 class="subtitle">Rate your experience (scale of 1-10)</h1>
       <input type="hidden" name="rid" id="rid" value="<?php echo $_GET['id'] ?>">
     <div>
@@ -36,7 +36,7 @@
     <div class="section">
       <h3>Allergy Info Provided?</h3>
       <div class="radio-toolbar">
-        <input type="radio" id="yes" name="allergyInfo" value="TRUE" >
+        <input type="radio" id="yes" name="allergyInfo" value="1" >
         <label for="yes">Yes</label>
         <input type="radio" id="no" name="allergyInfo" value="0" checked>
         <label for="no">No</label>
