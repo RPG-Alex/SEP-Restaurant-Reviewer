@@ -1,6 +1,10 @@
 
 /* ------------------- GENERAL ADDITIONAL STYLES -------------- */
 
+#postReview{
+  max-width: 600px;
+}
+
 .restaurant-info {
   width: 80%; 
   text-align: center;
@@ -14,8 +18,8 @@
     max-width: 100px;
 }
 
-#postReview{
-  max-width: 600px;
+.review-scores-list li span{
+  float: right;
 }
 
 /* --------------------TABLE STYLING -------------------------------- */

@@ -3,7 +3,7 @@
 <div id="postReview" class="container is-fluid">
   <br/>
   <div class="container">
-    <h1 class="title">My Review </h1>
+    <h1 class="title">Submit Review </h1>
   </div>
   <form class="container" action="" method='post'>
     <h2 class="subtitle">Rate your experience (scale of 1-10)</h1>

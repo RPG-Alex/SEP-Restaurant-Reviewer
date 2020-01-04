@@ -3,23 +3,25 @@ $restaurant = new Restaurant;
 $RID = $_GET['id']; // this line may be redundant, can we pass the get value along directly wihtout any harm?
 $details = $restaurant->getRestuarantByID($RID);
 if (isset($details->restaurantID)) {
-  echo "<div class='container hero is-medium is-primary is-fluid'>
-      <div class='container hero is-medium is-primary is-fluid restaurant-info'>
-          <br/>
-          <h1 class='title is-1'><strong>$details->name</strong></h1>
-          <hr/>
-          <h3 class='has-text-dark'>
-              <strong >Description:</strong> $details->description
-          </h3>
-          <h3 class='has-text-dark'>
-              <strong>Location:</strong> $details->location
-          </h3>
-          <h3 class='has-text-dark'>
-              <strong>Contact:</strong> $details->contact
-          </h3>
-          <hr/>
-      </div>
-  </div>"
+  echo "
+    <section class='hero is-primary is-1'>
+        <div class='hero-body'>
+            <div class='container restaurant-info'>
+                <h1 class='title is-uppercase'>
+                    $details->name
+                </h1>
+                <h2 class='subtitle'>
+                    <strong >Description:</strong> $details->description
+                </h2>
+                <h2 class='subtitle'>
+                    <strong >Location:</strong> $details->location
+                </h2>
+                <h2 class='subtitle'>
+                    <strong >Contact:</strong> $details->contact
+                </h2>
+            </div>
+        </div>
+    </section>"
 ;
 } else {
 
