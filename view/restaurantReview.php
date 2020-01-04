@@ -55,7 +55,7 @@ $total = 0;
                 <span>$review->spservice / 10</span>
               </li>
               <li>Cost: 
-                <span>$review->cost / 10</span>
+                <span>£$review->cost</span>
               </li>
               <li>Value: 
                 <span>$review->value / 10</span>
