@@ -9,7 +9,7 @@ echo "<div class='container'>
  <h1><b>Reviews:</b></h1>
  <br>";
 foreach ($reviewSet as $review) {
-  if ($review->approved == 1) {
+  if ($review->approved == 1) { //This checks if they are approved
     echo "
      <table>
        <tr>
