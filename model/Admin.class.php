@@ -14,7 +14,7 @@
       unset($_SESSION['logged_in']);
     }
     public function getAllUnapprovedReviews(){
-      $this->db->query('SELECT * FROM review WHERE approved = 0'); //This will get all unapproved reviews
+      $this->db->query('SELECT restaurant.restaurantID, restaurant.name, reviewID, cost, qfood, qservice, qclean, spservice, value, allergyInfo, overall, shortReview FROM review, restaurant WHERE review.approved = 0 AND restaurant.restaurantID = review.restaurantID'); //This will get all unapproved reviews
       $results = $this->db->resultSet();
       return $results;
     }

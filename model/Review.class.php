@@ -4,7 +4,7 @@
     public function __construct(){
       $this->db = new Database;
     }
-    // get all reviews where approved = 1
+    // get all reviews where approved = 1PHP
     public function getAllReviewsForRestaurant($rid){
       $this->db->query('SELECT * FROM review WHERE restaurantID = :rid');
       $this->db->bind(':rid',$rid);
