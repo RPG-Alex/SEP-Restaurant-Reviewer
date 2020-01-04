@@ -13,19 +13,57 @@
     public function logout(){
       unset($_SESSION['logged_in']);
     }
-    public function getReviewsToApprove(){
-      // need to write a function to get all reviews in need of approval
+    public function getAllUnapprovedReviews(){
+      $this->db->query('SELECT * FROM review WHERE approved = 0'); //This will get all unapproved reviews
+      $results = $this->db->resultSet();
+      return $results;
     }
-    public function approveReview(){
-      //This function should udpate the Database so a review is approved and made live
+    public function getAllReviews(){
+      $this->db->query('SELECT * FROM review');
+      $results = $this->db->resultSet();
+      return $results;
     }
-    public function rejectReview(){
-      //This function should reject a review and purge it from teh DB
+    public function approveReview($reviewID){
+      $this->db->query('UPDATE review SET approved = 1 WHERE reviewID = :reviewID');
+      $this->db->bind(':reviewID',$reviewID);
+      if($this->db->execute()){
+        return true;
+      } else {
+        return false;
+      }
     }
-    public function addRestaurant(){
-      //This is a function to add all the details for a new restaurant
+    public function rejectReview($reviewID){
+      $this->db->query('DELETE FROM review WHERE reviewID = :reviewID');
+      $this->db->bind(':reviewID',$reviewID);
+      if($this->db->execute()){
+        return true;
+      } else {
+        return false;
+      }
     }
-    public function updateRestaurant(){
-      // same as addRestaurant but updates an existing restaurant details
+    public function addRestaurant($restaurant){
+      $this->db->query('INSERT INTO restaurant (name,description,location,contact) VALUES (:name, :location,:contact)');
+      $this->db->bind(':name', $restaurant['name']);
+      $this->db->bind(':description', $restaurant['description']);
+      $this->db->bind(':location', $restaurant['location']);
+      $this->db->bind(':contact', $restaurant['contact']);
+      if($this->db->execute()){
+        return true;
+      } else {
+        return false;
+      }
+    }
+    public function updateRestaurant($restaurant){
+      $this->db->query('UPDATE restaurant SET name = :name, location = :location, contact = :contact WHERE restaurantID = :restaurantID');
+      $this->db->bind(':name', $restaurant['name']);
+      $this->db->bind(':description', $restaurant['description']);
+      $this->db->bind(':location', $restaurant['location']);
+      $this->db->bind(':contact', $restaurant['contact']);
+      $this->db-bind(':restaurantID',$restaurant['restaurantID']);
+      if($this->db->execute()){
+        return true;
+      } else {
+        return false;
+      }
     }
   }

@@ -12,12 +12,11 @@
       return $results;
     }
 
-    // get ALL reviews function to just display a table of reviews for the admin regardless of approved or not?
-    public function getAllReviews(){
-      $this->db->query('');// Need to finish writing this function
+    public function getAllReviews(){ //I've left this function here if it may be used for public facing site. THis function is also apart of the admin class, duplicate to prevent loading admin class unecessarily or loading review class in admin area. Though I may change this
+      $this->db->query('SELECT * FROM review');
+      $results = $this->db->resultSet();
+      return $results;
     }
-
-
     public function postReview($review){
       $this->db->query('INSERT INTO review (restaurantID, cost, qfood, qservice, qclean, spservice, value, allergyinfo, overall, shortReview) VALUES (:restaurantID, :cost, :qfood, :qservice, :qclean, :spservice, :value, :allergyinfo, :overall, :shortReview)');
       $this->db->bind(':restaurantID',$review['rid']) ;
