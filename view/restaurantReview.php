@@ -1,15 +1,29 @@
 <?php
-// basic layout of how all reviews could be listed for restaurant. Then use some javascript and CSS on the client side to hide them until expanded or what have you.
-$allReviews = new Review;
-$reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
-//Below will Generate the reviews previously posted
-$total = 0;
+  // basic layout of how all reviews could be listed for restaurant. Then use some javascript and CSS on the client side to hide them until expanded or what have you.
+  $allReviews = new Review;
+  $reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
+  
+  // Below calculates the average overall score for approved reviews
+  $total = 0;
   $reviews = 0;
   foreach ($reviewSet as $review) {
-    $total += $review->overall;
-    $reviews ++;
+    // this only counts approved scores into the average
+    if ($review->approved){
+      $total += $review->overall;
+      $reviews ++;
+    }
+    // if there are reviews then calculate the mean average (rounding to 1dp)
+    // no reviews returns 'No Reviews Yet'
+    if ($reviews > 0) {
+      $average = $total / $reviews;
+      $averageRounded = 'Average: ' . round($average, $precision = 1, $mode = PHP_ROUND_HALF_UP) .'/10';
+    } else {
+      $averageRounded = "No Reviews Yet";
+    }
+
   }
 ?>
+
 <div class="container">
   <div class="accordion-container">
 
@@ -17,12 +31,7 @@ $total = 0;
     <div class="title is-4">Reviews
       <span style="float: right;">
         <?php
-          if ($reviews > 0) {
-            $average = $total / $reviews;
-            echo 'Average: ' . round($average, $precision = 1, $mode = PHP_ROUND_HALF_UP) .'/10';
-          } else {
-            echo "No reviews yet";
-          }
+          echo $averageRounded;
         ?>
       </span>
     </div>
