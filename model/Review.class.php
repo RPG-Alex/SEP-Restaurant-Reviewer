@@ -6,7 +6,10 @@
     }
     // get all reviews where approved = 1
     public function getAllReviewsForRestaurant($rid){
-      $this->db->query('');// Need to finish writing this function
+      $this->db->query('SELECT * FROM review WHERE restaurantID = :rid');
+      $this->db->bind(':rid',$rid);
+      $results = $this->db->resultSet();
+      return $results;
     }
 
     // get ALL reviews function to just display a table of reviews for the admin regardless of approved or not?
@@ -32,7 +35,5 @@
       } else {
         return false;
       }
-      //Still need to finish this, but as is it should insert all data needed for a review!
-      // Need to add approved column to db, and set default value to false. Admin have ability to toggle.
     }
   }

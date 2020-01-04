@@ -19,6 +19,7 @@ if ($pageRequested == true){
     $page->body('../about');
   } elseif ($_GET['page']==="restaurant" && isset($_GET['id'])) {
     $page->body('restaurantInfo');
+    require_once APPROOT."/controller/Review.php";
     $page->body('postReview');
     $page->body('restaurantReview');
   } elseif ($_GET['page']==="login") {
