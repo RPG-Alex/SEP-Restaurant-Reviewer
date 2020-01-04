@@ -19,20 +19,34 @@ $reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
           <a><div>$review->shortReview <span style='float: right;'>$review->overall / 10</span></div></a>
           <div class='accordion-content'>
             <ul class='review-scores-list'>
-              <li>Quality: <span>$review->qfood / 10</span></li>
-              <li>Service<span>$review->qservice / 10</span></li>
-              <li>Cleanliness: <span>$review->qclean / 10</span></li>
-              <li>Speed of Service: <span>$review->spservice / 10</span></li>
-              <li>Cost: <span>$review->cost / 10</span></li>
-              <li>Value: <span>$review->value / 10</span></li>
-              <li>Allergy Info Provided: <span>";
+              <li>Quality: 
+                <span>$review->qfood / 10</span>
+              </li>
+              <li>Service:
+                <span>$review->qservice / 10</span>
+              </li>
+              <li>Cleanliness: 
+                <span>$review->qclean / 10</span>
+              </li>
+              <li>Speed of Service: 
+                <span>$review->spservice / 10</span>
+              </li>
+              <li>Cost: 
+                <span>$review->cost / 10</span>
+              </li>
+              <li>Value: 
+                <span>$review->value / 10</span>
+              </li>
+              <li>Allergy Info Provided: 
+                <span>";
                 if ($review->allergyInfo === 1) {
                   echo "Yes";
                 } else {
                   echo "No";
                 } 
                 echo "
-              </span></li>
+                </span>
+              </li>
             </ul>
           </div>
         </div>
@@ -44,6 +58,7 @@ $reviewSet= $allReviews->getAllReviewsForRestaurant($_GET['id']);
   </div>
 </div>
 
+<!-- Selects all accordion links, onClick event toggles visibility in styles.css -->
 <script>
 
   const items = document.querySelectorAll(".accordion a");

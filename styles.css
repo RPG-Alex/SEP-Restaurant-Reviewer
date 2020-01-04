@@ -5,6 +5,17 @@
   max-width: 600px;
 }
 
+#addRestaurant{
+  max-width: 600px;
+}
+#addRestaurant h2{
+  margin: 1em;
+}
+#addRestaurant label{
+  margin: 0 auto;
+  color: white;
+}
+
 .restaurant-info {
   width: 80%; 
   text-align: center;
